@@ -14,6 +14,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -77,8 +78,9 @@ fun ColorBox(item: ColorMap) {
         Modifier
             .fillMaxWidth()
             .height(60.dp)
-            .background(colorResource(id = item.res))) {
-        Text(text = item.name)
+            .background(colorResource(id = item.res))
+            .padding(8.dp)) {
+        Text(text = item.name, color = Color.White, style = TextStyle(shadow = Shadow(color = Color.DarkGray, blurRadius = 4F)))
     }
 }
 
